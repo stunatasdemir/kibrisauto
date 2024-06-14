@@ -1,0 +1,28 @@
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white; /* Tema renginize uygun başka bir renk kullanabilirsiniz */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  
+  .splash-logo {
+    width: 350x; /* Gerekirse boyutu ayarlayın */
+    height: auto;
+    animation: heartbeat 1.5s ease-in-out infinite; /* Kalp atışı animasyonu */
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(2);
+    }
+    50% {
+      transform: scale(2.5);
+    }
+  }
+  

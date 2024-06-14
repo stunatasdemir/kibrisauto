@@ -1,0 +1,63 @@
+.slider {
+    text-align: center;
+    max-width: 1298px; 
+    margin: auto;
+    border-radius: 8px;
+
+
+}
+
+.main-img img {
+    width: 1298px;
+    height: 572px; 
+    display: block;
+    margin: 0 auto;
+    transition: opacity 0.5s ease-in-out;
+
+
+}
+
+.fade-in {
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.thumb-container {
+    display: flex;
+    overflow-x: auto; 
+    gap: 16px; /* Resimler arası boşluk */
+    padding: 16px 0px 0px 0px;
+    margin: 0 auto;
+    justify-content: center;
+    width: 1298px; 
+    
+}
+
+.thumb {
+    width: 412px; 
+    height: 270px;opacity: 0.6;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    
+}
+
+.thumb.active {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .thumb-container {
+        display: none; /* Mobil görünümde küçük resimleri gizle */
+    }
+
+    .main-img img {
+        max-width: 100%; /* Mobilde resmi ekran genişliğine sığdır */
+        height: auto; /* Yüksekliği otomatik ayarla */
+    }
+}

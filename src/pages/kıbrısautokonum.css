@@ -1,0 +1,100 @@
+.kıbrısautokonum-container {
+    padding: 0;  /* Sağ ve soldaki boşlukları kaldırmak için padding'i sıfırladım */
+    text-align: center;
+    width: 100%; /* Konteyner genişliğini yüzde 100 yaptım */
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil etmek için box-sizing kullandım */
+}
+
+/* Navbar stili */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.header nav ul li {
+    margin: 0 10px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.header .contact-icons a {
+    color: white;
+    margin: 0 10px;
+}
+
+/* Sayfa başlığı */
+.page-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #4F0077;
+}
+
+/* Harita stili */
+.map-container {
+    margin-bottom: 20px;
+    width: 100%; /* Konteyner genişliğini yüzde 100 yaptım */
+}
+
+/* İletişim bilgileri düzeni */
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.contact-details h2 {
+    color: #4F0077;
+}
+
+.contact-details p {
+    margin: 5px 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #4F0077;
+    color: white;
+    padding: 2em;
+    margin: 0;  /* Sağ ve soldaki boşlukları kaldırmak için margin'i sıfırladım */
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil etmek için box-sizing kullandım */
+}
+
+.footer a:hover {
+    transform: scale(1.04);
+}
+
+.footer_menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer_company-text {
+    font-size: 0.6rem;
+}
+
+.footer_icons {
+    margin: 1em 0;
+}
+
+.footer_menu, .footer_icons {
+    transition: transform 0.3s ease;
+}

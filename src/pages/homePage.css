@@ -1,0 +1,352 @@
+/* CSS RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* CSS START */
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    margin-inline: auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    background-color: transparent;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.header.scrolled {
+    background-color: white;
+}
+
+.header_menu {
+    display: flex;
+    gap: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.header_menu ul:hover {
+    color: #4F0077;
+    transform: scale(1.04);
+}
+
+.header_buttons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Hero Section - Video Bölümü */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full height */
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.hero-overlay h1 {
+    margin: 0;
+    font-size: 48px;
+}
+
+.hero-overlay p {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Search Bar */
+.search-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-search_bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    gap: 1rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-search_bar select,
+.hero-search_bar input {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.hero-search_bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.main-tum_araclar {
+    padding: 2rem;
+    text-align: center;
+}
+
+.main-tum_araclar h2 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    color: #4F0077;
+}
+
+.main-tum_araclar-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.main_box {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    width: 300px;
+    cursor: pointer;
+}
+
+.main_box:hover {
+    transform: translateY(-5px);
+}
+
+.main_box-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.main_box-container {
+    padding: 1rem;
+    text-align: center;
+}
+
+.main_box-container p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.main_box-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+}
+
+.main_box-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.main_box-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4F0077;
+    margin-top: 0.5rem;
+}
+
+.main_box-meeting {
+    background-color: #4F0077;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.main_box-meeting:hover {
+    background-color: #3e005b;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #4F0077;
+    color: white;
+    padding: 2em;
+}
+
+.footer a:hover {
+    transform: scale(1.04);
+}
+
+.footer_menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer_company-text {
+    font-size: 0.6rem;
+}
+
+.footer_icons {
+    margin: 1em 0;
+}
+
+.footer_menu, .footer_icons {
+    transition: transform 0.3s ease;
+}
+
+/* Navbar */
+header .nav-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+@media only screen and (max-width: 40em) {
+    header .nav-btn {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: -1000vh;
+        right: 0;
+        transition: top 0.5s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem !important;
+        color: white;
+        background-color: #4F0077;
+        z-index: 99999999;
+    }
+
+    header .responsive_nav {
+        top: 0; /* This will slide the menu down */
+    }
+
+    nav .nav-close-btn {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        color: white;
+    }
+
+    .header_buttons {
+        display: none;
+    }
+}

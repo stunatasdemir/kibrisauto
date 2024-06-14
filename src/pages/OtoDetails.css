@@ -1,0 +1,193 @@
+.details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.details-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.details-main {
+    flex: 2;
+    margin-right: 20px;
+}
+
+.details-header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.details-header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.details-gallery {
+    margin-top: 20px;
+}
+
+.details-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.details-thumbnails {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.details-thumbnails img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.details-thumbnails img:hover {
+    border: 2px solid #4F0077;
+}
+
+.details-description {
+    margin-top: 20px;
+}
+
+.details-description h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.details-description p {
+    white-space: pre-wrap; /* Metin içindeki boşlukları ve yeni satırları korur */
+    line-height: 1.5; /* Satır arası boşluğu artırır */
+    color: #333; /* Metin rengi */
+}
+
+.details-description .highlight {
+    font-weight: bold;
+    color: #4F0077;
+}
+
+.details-description ul {
+    list-style: none; /* Liste işaretlerini kaldırır */
+    padding: 0;
+}
+
+.details-description ul li {
+    margin-bottom: 10px;
+}
+
+.details-description ul li::before {
+    content: "🔹";
+    margin-right: 10px;
+}
+
+.details-description ul li span {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.details-sidebar {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-left: 2em;
+    align-self: flex-start; /* Yan yana hizalama */
+}
+
+.details-info h2,
+.details-contact h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.details-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.details-info li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.details-info li strong {
+    font-weight: bold;
+}
+
+.details-contact button {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: #4F0077;  /* Arka plan rengi */
+    color: white;  /* Yazı rengi */
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 1em;
+}
+
+.details-contact button svg {
+    margin-right: 10px;
+}
+
+.similar-cars {
+    width: 100%;
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+.similar-cars-list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+.similar-car-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+    width: 300px;
+    flex: 0 0 auto;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.similar-car-item:hover {
+    transform: translateY(-5px);
+}
+
+.similar-car-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.similar-car-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.similar-car-info p {
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.similar-car-info .similar-car-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4F0077;
+}

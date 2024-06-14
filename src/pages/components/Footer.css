@@ -1,0 +1,58 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: #4F0077;
+    color: white;
+    padding: 2em;
+}
+
+.footer a:hover {
+    transform: scale(1.04);
+}
+
+.footer_menu {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer_company-text {
+    font-size: 0.6rem;
+}
+
+.footer_icons {
+    margin: 1em 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.footer_menu, .footer_icons {
+    transition: transform 0.3s ease;
+}
+
+.contact-button {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    background-color: white;
+    color: #4F0077;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 1em;
+}
+
+.contact-button:hover {
+    background-color: #4F0077;
+    color: white;
+}
+
+.contact-button svg {
+    margin-right: 0.5em;
+}
+
+.contact-button span {
+    margin-left: 0.5em;
+}
